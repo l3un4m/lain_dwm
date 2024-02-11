@@ -6,19 +6,19 @@ static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=20" };
-static const char dmenufont[]       = "monospace:size=20";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
-#include "/home/gio/.cache/wal/colors-wal-dwm.h"
-//static const char *colors[][3]      = {
+static const char *fonts[]          = { "Hack:size=20" };
+static const char dmenufont[]       = "Hack:size=20";
+static const char col_gray1[]       = "#171a3c";
+static const char col_gray2[]       = "#23285c";
+static const char col_gray3[]       = "#c5c0d8";
+static const char col_gray4[]       = "#f0eff5";
+static const char col_cyan[]        = "#bd495b";
+//#include "/home/gio/.cache/wal/colors-wal-dwm.h"
+static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-//	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-//	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-//};
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+};
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6"};
@@ -64,7 +64,7 @@ static const char *termcmd[]        =         { "st", NULL };
 static const char *volumeup[]       =       {"amixer", "-q", "sset", "Master", "5%+",  NULL };
 static const char *volumedown[]     =       {"amixer", "-q", "sset", "Master", "5%-",  NULL };
 static const char *refresh_layout[] =   {"source", "~/.xinitrc",  NULL };
-static const char *screenshot[]     =       {"scrot", "/home/gio/pictures/screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL};
+static const char *screenshot[]     =       {"scrot","-s", "/home/gio/pictures/screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL};
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
